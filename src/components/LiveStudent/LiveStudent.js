@@ -1,4 +1,5 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import studentShape from '../../helpers/propz/studentShape';
 
@@ -16,6 +17,7 @@ class LiveStudent extends React.Component {
       <div className="Student col-3">
         <div className="card">
           <div className="card-body">
+            <FontAwesomeIcon icon="fish" />
             <h5 className="card-title">{student.firstName} {student.lastName}</h5>
           </div>
         </div>

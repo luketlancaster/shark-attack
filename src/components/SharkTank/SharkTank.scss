@@ -1,0 +1,12 @@
+.SharkTank {
+  background-color: lightblue;
+  border: 3px solid lightcoral;
+  border-radius: 10px;
+  margin: 30px;
+  padding: 15px;
+
+  .tank {
+    align-content: space-between;
+    justify-content: space-evenly;
+  }
+}
