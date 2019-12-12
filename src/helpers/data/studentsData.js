@@ -55,7 +55,7 @@ const livingStudents = () => students.filter((s) => !s.isDead);
 const dearlyBeloved = () => students.filter((s) => s.isDead);
 
 const followTheLight = (id) => {
-  const key = students.findKey((s) => s.id === id);
+  const key = students.findIndex((s) => s.id === id);
   students[key].isDead = true;
 };
 

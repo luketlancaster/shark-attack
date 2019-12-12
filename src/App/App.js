@@ -24,11 +24,21 @@ class App extends React.Component {
     });
   }
 
+  eatStudent = () => {
+    const { livingStudents } = this.state;
+    const eatMe = livingStudents[Math.floor(Math.random() * livingStudents.length)];
+    studentData.followTheLight(eatMe.id);
+    this.setState({
+      livingStudents: studentData.livingStudents(),
+      deadStudents: studentData.dearlyBeloved(),
+    });
+  }
+
   render() {
     return (
       <div className="App">
         <h1>Shark Attack</h1>
-        <SharkTank livingStudents={this.state.livingStudents} />
+        <SharkTank livingStudents={this.state.livingStudents} eatStudent={this.eatStudent} />
         <Graveyard deadStudents={this.state.deadStudents} />
       </div>
     );

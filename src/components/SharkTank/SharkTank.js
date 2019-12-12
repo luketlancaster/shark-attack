@@ -9,6 +9,13 @@ import './SharkTank.scss';
 class SharkTank extends React.Component {
   static propTypes = {
     livingStudents: PropTypes.arrayOf(studentShape),
+    eatStudent: PropTypes.func,
+  }
+
+  eatStudentEvent = (e) => {
+    e.preventDefault();
+    const { eatStudent } = this.props;
+    eatStudent();
   }
 
   render() {
@@ -18,6 +25,7 @@ class SharkTank extends React.Component {
     return (
       <div className="SharkTank">
         <h2>SharkTank</h2>
+        <button className="btn btn-danger" onClick={this.eatStudentEvent} disabled={!livingStudents.length}>SHARK ATTACK</button>
         <div className="tank d-flex flex-wrap">
           {studentCards}
         </div>
