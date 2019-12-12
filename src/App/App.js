@@ -1,22 +1,27 @@
 import React from 'react';
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faFish, faCircle } from '@fortawesome/free-solid-svg-icons';
+import { faFish, faCircle, faSkullCrossbones } from '@fortawesome/free-solid-svg-icons';
 
 import SharkTank from '../components/SharkTank/SharkTank';
+import Graveyard from '../components/Graveyard/Graveyard';
 
 import studentData from '../helpers/data/studentsData';
 
 import './App.scss';
 
-library.add(faFish, faCircle);
+library.add(faFish, faCircle, faSkullCrossbones);
 
 class App extends React.Component {
   state = {
     livingStudents: [],
+    deadStudents: [],
   }
 
   componentDidMount() {
-    this.setState({ livingStudents: studentData.livingStudents() });
+    this.setState({
+      livingStudents: studentData.livingStudents(),
+      deadStudents: studentData.dearlyBeloved(),
+    });
   }
 
   render() {
@@ -24,6 +29,7 @@ class App extends React.Component {
       <div className="App">
         <h1>Shark Attack</h1>
         <SharkTank livingStudents={this.state.livingStudents} />
+        <Graveyard deadStudents={this.state.deadStudents} />
       </div>
     );
   }
