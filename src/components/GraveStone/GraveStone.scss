@@ -1,0 +1,10 @@
+@import '../../styles/variables';
+
+.Gravestone {
+  .card {
+    background-color: $grey;
+    border-bottom: $green 10px dashed;
+    border-radius: 45px 45px 0 0;
+    height: 225px;
+  }
+}
