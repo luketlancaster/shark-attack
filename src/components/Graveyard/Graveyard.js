@@ -17,7 +17,7 @@ class Graveyard extends React.Component {
     return (
       <div className="Graveyard">
         <h2>Graveyard</h2>
-        <div className="d-flex flex-wrap">
+        <div className="plots d-flex flex-wrap">
           {gravestones}
         </div>
       </div>

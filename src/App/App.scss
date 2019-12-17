@@ -1,5 +1,7 @@
+@import '../styles/variables';
+
 .App {
-  background-color: lightsalmon;
+  background-image: linear-gradient($yellow, $red 50%);
   min-height: 100vh;
   text-align: center;
 }

@@ -17,8 +17,8 @@ class GraveStone extends React.Component {
       <div className="Gravestone col-3">
         <div className="card">
           <div className="card-body">
-            <FontAwesomeIcon icon="skull-crossbones" />
             <h5 className="card-title">{student.firstName} {student.lastName}</h5>
+            <FontAwesomeIcon icon="skull-crossbones" size="6x"/>
           </div>
         </div>
       </div>
