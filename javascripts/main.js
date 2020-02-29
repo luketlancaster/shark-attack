@@ -12,9 +12,15 @@ const sharkAttackEvent = () => {
   buildDom();
 }
 
+const reviveEvent = (e) => {
+  personData.bringToLife(e.target.id);
+  buildDom();
+}
+
 const init = () => {
   buildDom();
-  $('#bite-me').click(sharkAttackEvent)
+  $('#bite-me').click(sharkAttackEvent);
+  $('body').on('click', '.revive-btn', reviveEvent);
 }
 
 init();

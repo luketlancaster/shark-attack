@@ -12,7 +12,7 @@ const buildGraveyard = () => {
       <div class="card col-4 person-card">
         <div class="card-body">
           <h5 class="card-title">${dead.name}</h5>
-          <button class="btn btn-success">MAKE ALIVE!!!</button>
+          <button id="${dead.id}" class="btn btn-success revive-btn">MAKE ALIVE!!!</button>
         </div>
       </div>
     `;
