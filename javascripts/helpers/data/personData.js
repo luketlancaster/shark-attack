@@ -19,10 +19,10 @@ const persons = [
   { id: "person18", name: "Michele Rawlins", isDead: false },
   { id: "person19", name: "Monique Bass", isDead: false },
   { id: "person20", name: "Ola Oladinni", isDead: false },
-  { id: "person21", name: "Sarah Holder", isDead: false },
-  { id: "person22", name: "Stephen Castaneda", isDead: false },
-  { id: "person23", name: "Steven Zelenak", isDead: false },
-  { id: "person24", name: "Todd Spainhour", isDead: false },
+  { id: "person21", name: "Sarah Holder", isDead: true },
+  { id: "person22", name: "Stephen Castaneda", isDead: true },
+  { id: "person23", name: "Steven Zelenak", isDead: true },
+  { id: "person24", name: "Todd Spainhour", isDead: true },
   { id: "person25", name: "Zac Crumpton", isDead: true }
 ];
 
@@ -30,4 +30,8 @@ const getAlivePersons = () => {
   return persons.filter(person => !person.isDead);
 }
 
-export default { getAlivePersons }
+const getDeadPersons = () => {
+  return persons.filter(person => person.isDead);
+}
+
+export default { getAlivePersons, getDeadPersons }
