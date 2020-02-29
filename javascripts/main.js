@@ -1,1 +1,7 @@
-console.log('yeah yeah yeah');
+import tank from './components/tank.js';
+
+const init = () => {
+  tank.tankBuilder();
+}
+
+init();
