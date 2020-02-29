@@ -1,5 +1,5 @@
 const printToDom = (divId, textToPrint) => {
-  document.querySelector(`#${divId}`).innerHTML = textToPrint;
+  $(`#${divId}`).html(textToPrint);
 }
 
 export default { printToDom }
